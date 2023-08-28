@@ -1,0 +1,66 @@
+/* Global Box Sizing */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  /* Body Styles */
+  body {
+    background-color: #F3F3F3;
+    margin: 0;
+  }
+  
+  /* Container Styles */
+  .container .ql-editor {
+    /* Set the width and minimum height of the Quill editor */
+    width: 8.5in;
+    min-height: 11in;
+    padding: 1in; /* Add padding around the Quill editor content */
+    margin: 1rem; /* Add margin to separate the editor from other elements */
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, .5); /* Add a subtle box shadow for a raised effect */
+    background-color: white; /* Set the background color of the editor to white */
+  }
+  
+  .container .ql-container.ql-snow {
+    border: none; /* Remove the border around the Quill container */
+    display: flex; /* Use flexbox to center the editor content horizontally */
+    justify-content: center; /* Center the editor content horizontally */
+  }
+  
+  .container .ql-toolbar.ql-snow {
+    /* Style the Quill toolbar at the top of the editor */
+    display: flex; /* Use flexbox to center the toolbar content horizontally */
+    justify-content: center; /* Center the toolbar content horizontally */
+    position: sticky; /* Make the toolbar stick to the top of the editor container */
+    top: 0; /* Position the toolbar at the top of the editor container */
+    z-index: 1; /* Ensure the toolbar appears above the editor content */
+    background-color: #F3F3F3; /* Set the background color of the toolbar */
+    border: none; /* Remove the border around the toolbar */
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, .5); /* Add a subtle box shadow for a raised effect */
+  }
+  
+  /* Page Styles */
+  @page {
+    margin: 1in; /* Set the margin for the printed page */
+  }
+  
+  /* Print Styles */
+  @media print {
+    body {
+      background: none; /* Remove the background color when printing */
+    }
+  
+    .container .ql-editor {
+      /* Adjust the styles for the printed editor */
+      width: 6.5in; /* Set a smaller width for the printed editor */
+      height: 9in; /* Set a smaller height for the printed editor */
+      padding: 0; /* Remove padding when printing */
+      margin: 0; /* Remove margin when printing */
+      box-shadow: none; /* Remove box shadow when printing */
+      align-self: flex-start; /* Align the editor content to the top of the printed page */
+    }
+  
+    .container .ql-toolbar.ql-snow {
+      display: none; /* Hide the toolbar when printing */
+    }
+  }
+  
